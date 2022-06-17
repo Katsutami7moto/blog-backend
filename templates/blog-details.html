@@ -10,7 +10,8 @@
         <h1>Blog details</h1>
         <nav aria-label="breadcrumb" class="banner-breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a>
+            </li>
             <li class="breadcrumb-item active" aria-current="page">Blog
               Details
             </li>
@@ -30,10 +31,11 @@
       <div class="col-lg-8">
         <div class="main_blog_details">
           {% if post.image_url %}
-          <img class="card-img rounded-0" src="{{post.image_url}}" alt="">
+          <img class="card-img rounded-0" src="{{post.image_url}}"
+               alt="image illustrating this post">
           {% else %}
           <img class="img-fluid" src="{% static 'img/banner/blog.png' %}"
-               alt="">
+               alt="default image for posts without their own">
           {% endif %}
           <h4>{{post.title}}</h4>
           <div class="user_details">
